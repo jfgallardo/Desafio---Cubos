@@ -1,5 +1,5 @@
 {
-  "name": "Desafio | Cubos",
+  "name": "desafio_cubos",
   "private": true,
   "scripts": {
     "build": "turbo run build",

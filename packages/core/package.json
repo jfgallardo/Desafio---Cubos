@@ -1,0 +1,18 @@
+{
+  "name": "@repo/core",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsup src/index.ts --dts --watch",
+    "build": "tsup src/index.ts --dts --minify"
+  },
+  "author": "Julio Gallardo",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tsup": "^8.4.0"
+  },
+  "dependencies": {
+    "typescript": "^5.8.3"
+  }
+}

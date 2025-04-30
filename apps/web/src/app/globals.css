@@ -1,0 +1,139 @@
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  /* Purple Dark */
+  --color-ui-purple-dark-100: #18111b;
+  --color-ui-purple-dark-200: #1e1523;
+  --color-ui-purple-dark-300: #3d224e;
+  --color-ui-purple-dark-400: #3d224e;
+  --color-ui-purple-dark-500: #48295c;
+  --color-ui-purple-dark-600: #54346b;
+  --color-ui-purple-dark-700: #664282;
+  --color-ui-purple-dark-800: #8457aa;
+  --color-ui-purple-dark-900: #8e4ec6;
+  --color-ui-purple-dark-1000: #9a5cd0;
+  --color-ui-purple-dark-1100: #d19dff;
+  --color-ui-purple-dark-1200: #ecd9fa;
+
+  /* Purple Dark Alpha */
+  --color-ui-purple-dark-alpha-100: rgba(180, 18, 249, 0.04);
+  --color-ui-purple-dark-alpha-200: rgba(183, 68, 247, 0.08);
+  --color-ui-purple-dark-alpha-300: rgba(193, 80, 255, 0.18);
+  --color-ui-purple-dark-alpha-400: rgba(187, 83, 253, 0.26);
+  --color-ui-purple-dark-alpha-500: rgba(190, 92, 253, 0.32);
+  --color-ui-purple-dark-alpha-600: rgba(193, 109, 253, 0.38);
+  --color-ui-purple-dark-alpha-700: rgba(195, 120, 253, 0.48);
+  --color-ui-purple-dark-alpha-800: rgba(196, 126, 255, 0.64);
+  --color-ui-purple-dark-alpha-900: rgba(182, 97, 255, 0.76);
+  --color-ui-purple-dark-alpha-1000: rgba(188, 111, 255, 0.8);
+  --color-ui-purple-dark-alpha-1100: rgba(209, 157, 255, 1);
+  --color-ui-purple-dark-alpha-1200: rgba(241, 221, 255, 0.98);
+
+  /* Purple */
+  --color-ui-purple-100: #fefcfe;
+  --color-ui-purple-200: #fbf7fe;
+  --color-ui-purple-300: #f7edfe;
+  --color-ui-purple-400: #f2e2fc;
+  --color-ui-purple-500: #ead5f9;
+  --color-ui-purple-600: #e0c4f4;
+  --color-ui-purple-700: #d1afec;
+  --color-ui-purple-800: #be93e4;
+  --color-ui-purple-900: #8e4ec6;
+  --color-ui-purple-1000: #8347b9;
+  --color-ui-purple-1100: #8145b5;
+  --color-ui-purple-1200: #402060;
+
+  /* Purple Alpha */
+  --color-ui-purple-alpha-100: rgba(170, 0, 170, 0.01);
+  --color-ui-purple-alpha-200: rgba(128, 0, 224, 0.03);
+  --color-ui-purple-alpha-300: rgba(142, 0, 241, 0.07);
+  --color-ui-purple-alpha-400: rgba(141, 0, 229, 0.11);
+  --color-ui-purple-alpha-500: rgba(128, 0, 219, 0.16);
+  --color-ui-purple-alpha-600: rgba(122, 1, 208, 0.23);
+  --color-ui-purple-alpha-700: rgba(109, 0, 195, 0.31);
+  --color-ui-purple-alpha-800: rgba(102, 0, 192, 0.42);
+  --color-ui-purple-alpha-900: rgba(92, 0, 173, 0.69);
+  --color-ui-purple-alpha-1000: rgba(83, 0, 158, 0.72);
+  --color-ui-purple-alpha-1100: rgba(82, 0, 154, 0.73);
+  --color-ui-purple-alpha-1200: rgba(37, 0, 73, 0.87);
+
+  /* Mauve Dark */
+  --color-ui-mauve-dark-100: #121113;
+  --color-ui-mauve-dark-200: #1a191b;
+  --color-ui-mauve-dark-300: #232225;
+  --color-ui-mauve-dark-400: #2b292d;
+  --color-ui-mauve-dark-500: #323035;
+  --color-ui-mauve-dark-600: #3c393f;
+  --color-ui-mauve-dark-700: #49474e;
+  --color-ui-mauve-dark-800: #625f69;
+  --color-ui-mauve-dark-900: #6f6d78;
+  --color-ui-mauve-dark-1000: #7c7a85;
+  --color-ui-mauve-dark-1100: #b5b2bc;
+  --color-ui-mauve-dark-1200: #eeeef0;
+
+  /* Mauve Dark Alpha */
+  --color-ui-mauve-dark-alpha-100: rgba(0, 0, 0, 0);
+  --color-ui-mauve-dark-alpha-200: rgba(245, 244, 246, 0.04);
+  --color-ui-mauve-dark-alpha-300: rgba(235, 234, 248, 0.08);
+  --color-ui-mauve-dark-alpha-400: rgba(238, 229, 248, 0.11);
+  --color-ui-mauve-dark-alpha-500: rgba(239, 230, 254, 0.15);
+  --color-ui-mauve-dark-alpha-600: rgba(241, 230, 253, 0.19);
+  --color-ui-mauve-dark-alpha-700: rgba(238, 233, 255, 0.25);
+  --color-ui-mauve-dark-alpha-800: rgba(238, 231, 255, 0.36);
+  --color-ui-mauve-dark-alpha-900: rgba(234, 230, 253, 0.43);
+  --color-ui-mauve-dark-alpha-1000: rgba(236, 233, 253, 0.49);
+  --color-ui-mauve-dark-alpha-1100: rgba(245, 241, 255, 0.72);
+  --color-ui-mauve-dark-alpha-1200: rgba(253, 253, 255, 0.94);
+
+  /* Mauve */
+  --color-ui-mauve-100: #fdfcfd;
+  --color-ui-mauve-200: #faf9fb;
+  --color-ui-mauve-300: #f2eff3;
+  --color-ui-mauve-400: #eae7ec;
+  --color-ui-mauve-500: #e3dfe6;
+  --color-ui-mauve-600: #dbd8e0;
+  --color-ui-mauve-700: #d0cdd7;
+  --color-ui-mauve-800: #bcbac7;
+  --color-ui-mauve-900: #8e8c99;
+  --color-ui-mauve-1000: #84828e;
+  --color-ui-mauve-1100: #65636d;
+  --color-ui-mauve-1200: #211f26;
+
+  /* Mauve Alpha */
+  --color-ui-mauve-alpha-100: rgba(85, 0, 85, 0.01);
+  --color-ui-mauve-alpha-200: rgba(43, 0, 85, 0.02);
+  --color-ui-mauve-alpha-300: rgba(48, 0, 64, 0.06);
+  --color-ui-mauve-alpha-400: rgba(32, 0, 54, 0.09);
+  --color-ui-mauve-alpha-500: rgba(32, 0, 56, 0.13);
+  --color-ui-mauve-alpha-600: rgba(20, 0, 53, 0.15);
+  --color-ui-mauve-alpha-700: rgba(16, 0, 51, 0.2);
+  --color-ui-mauve-alpha-800: rgba(8, 0, 49, 0.27);
+  --color-ui-mauve-alpha-900: rgba(5, 0, 29, 0.45);
+  --color-ui-mauve-alpha-1000: rgba(5, 0, 25, 0.49);
+  --color-ui-mauve-alpha-1100: rgba(4, 0, 17, 0.61);
+  --color-ui-mauve-alpha-1200: rgba(2, 0, 8, 0.88);
+}
+
+#body {
+  padding: 0px;
+  gap: 10px;
+  width: 100%;
+  height: 974px;
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 30%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../assets/img/BACKGROUND-krists.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 1;
+  z-index: 2;
+}

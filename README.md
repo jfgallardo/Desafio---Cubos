@@ -1,84 +1,126 @@
-# Turborepo starter
+# 🎬 Filmes App
 
-This Turborepo starter is maintained by the Turborepo core team.
+Aplicativo web fullstack responsivo para cadastro, edição, visualização e exclusão de filmes, com funcionalidades de login (e-mail/senha e GitHub), busca, filtros e envio de e-mails automáticos com lembretes e recuperação de senha.
 
-## Using this example
+Desenvolvido com foco em boas práticas, responsividade, modo escuro, integração com The Movie Database (TMDB) e arquitetura em monorepo com Turborepo.
 
-Run the following command:
+---
 
-```sh
-npx create-turbo@latest
-```
+## 🚀 Tecnologias Utilizadas
 
-## What's inside?
+### 🔧 Frontend (`apps/web`)
 
-This Turborepo includes the following packages/apps:
+- Next.js
+- Tailwind CSS
+- Zustand
+- NextAuth.js (e-mail/senha + GitHub)
+- Zod + React Hook Form
+- Integração com The Movie Database (TMDB)
+- Dark/Light mode
 
-### Apps and Packages
+### 🔧 Backend (`apps/api`)
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- NestJS
+- Prisma ORM
+- PostgreSQL
+- JWT
+- Swagger
+- Envio de e-mails com Ethereal
+- Tarefas agendadas com @nestjs/schedule
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+### Monorepo
 
-### Utilities
+- Turborepo
+- Workspaces
 
-This Turborepo has some additional tools already setup for you:
+---
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+## 🧩 Funcionalidades
 
-### Build
+- Autenticação com e-mail/senha e GitHub
+- Recuperação de senha via e-mail
+- Listagem paginada de filmes (10 por página)
+- Busca textual
+- Filtros por duração, datas e outros
+- Cadastro assistido via integração com TMDB
+- Envio automático de lembrete 24h antes da estreia do filme
+- Modo claro/escuro com botão de alternância
+- Rotas protegidas
+- Documentação da API com Swagger
 
-To build all apps and packages, run the following command:
+---
 
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
+## 📁 Estrutura do Monorepo
 
 ```
-cd my-turborepo
-npx turbo login
+Desafio | Cubos/
+├── apps/
+│   ├── web/         # Frontend (Next.js)
+│   └── api/         # Backend (NestJS)
+├── packages/
+│   └── core/      # Tipos, schemas e utilitários compartilhados
+├── turbo.json       # Configuração do Turborepo
+├── package.json     # Workspaces
+└── README.md
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+---
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+## ⚙️ Instalação e Execução
+
+### 📌 Pré-requisitos
+
+- Node.js 18+
+- PostgreSQL em execução
+
+### Clonar o projeto
+
+```bash
+git clone https://github.com/jfgallardo/filmes-app.git
+cd filmes-app
+npm install
+```
+
+### Configurar variáveis de ambiente
+
+Crie os arquivos `.env`:
+
+```bash
+cp apps/api/.env.example apps/api/.env
+cp apps/web/.env.example apps/web/.env
+```
+
+### ▶️ Iniciar o backend (NestJS) + frontend (Next.js)
+
+```bash
+npm  run dev
+```
+
+Acesse: [http://localhost:3000](http://localhost:3000)
+
+---
+
+## Swagger - Documentação da API
+
+Disponível em:
 
 ```
-npx turbo link
+http://localhost:3002/api
 ```
 
-## Useful Links
+---
 
-Learn more about the power of Turborepo:
+## Agendamentos
 
-- [Tasks](https://turborepo.com/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turborepo.com/docs/core-concepts/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+O backend usa `@nestjs/schedule` para:
+
+- Enviar lembretes por e-mail 24 horas antes do lançamento de um filme
+
+## Autenticação
+
+- JWT
+- Login com e-mail/senha e GitHub via NextAuth.js
+
+## Autor
+
+Desenvolvido por [Julio Gallardo](https://github.com/jfgallardo)
