@@ -76,8 +76,8 @@ Desafio | Cubos/
 ### Clonar o projeto
 
 ```bash
-git clone https://github.com/jfgallardo/filmes-app.git
-cd filmes-app
+git clone [https://github.com/jfgallardo/filmes-app.git](https://github.com/jfgallardo/Desafio---Cubos)
+cd Desafio---Cubos
 npm install
 ```
 
